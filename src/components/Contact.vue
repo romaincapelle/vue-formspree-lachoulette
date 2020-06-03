@@ -6,6 +6,8 @@
       de 9h à 12h. Pour commander en ligne et venir retirer en magasin, veuillez
       remplir le formulaire ci-dessous.
     </p>
+    <hr class="mt-6" />
+    <h2 class="text-xl mt-6">Etape 01 - Mes informations commande</h2>
     <form class="my-6" role="form" method="POST" @submit.prevent="sendEmail">
       <div>
         <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
@@ -15,7 +17,7 @@
           class="my-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           type="text"
           name="name"
-          placeholder="Name"
+          placeholder="Votre nom"
           v-model="nameMsg"
         />
       </div>
@@ -27,25 +29,37 @@
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           type="email"
           name="_replyto"
-          placeholder="abc@abc.com"
+          placeholder="Votre E-mail"
           v-model="emailMsg"
         />
       </div>
       <div>
         <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
-          >Message</label
+          >Téléphone</label
+        >
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          type="email"
+          name="_replyto"
+          placeholder="Ex: 03 27 35 72 44"
+          v-model="emailMsg"
+        />
+      </div>
+      <div>
+        <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
+          >Vous pouvez nous laissez un commentaire</label
         >
         <textarea
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           name="message"
           rows="5"
-          placeholder="Message"
+          placeholder="Commentaire"
           v-model="messageMsg"
         ></textarea>
       </div>
 
       <BeerForm @submit="addBeer" />
-      <h3 v-if="beers.length > 0">beer</h3>
+      <h3 v-if="beers.length > 0">Votre Panier</h3>
       <ul>
         <ListBeer
           v-for="(beer, i) in beers"
@@ -54,6 +68,17 @@
           @delete="deleteBeer(i)"
         />
       </ul>
+
+      <hr class="mt-6" />
+
+      <!-- 18 ans > -->
+      <div class="flex mt-6">
+        <label class="flex items-center">
+          <input type="checkbox" class="form-checkbox" />
+          <span class="ml-2">Je confirme avoir plus de 18 ans.</span>
+        </label>
+      </div>
+
       <div class="my-8">
         <button
           class=" w-full text-sm border-2 py-1 px-2 hover:bg-white hover:text-grey bg-yellow h-12"

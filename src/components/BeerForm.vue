@@ -1,7 +1,8 @@
 <template>
   <div>
+    <hr class="mt-6" />
     <form @submit.prevent="submit">
-      <h2 class="text-xl mt-6">Ma commande</h2>
+      <h2 class="text-xl mt-6">Etape 02 - Ma commande</h2>
       <p class="text-sm my-2">Choisissez la quantité et le type de bière</p>
       <div class="flex items-center">
         <div class="w-1/5 mr-3">
