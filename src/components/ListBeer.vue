@@ -3,18 +3,12 @@
     <div class="beer-content" v-if="!editing">
       <p>{{ beer.nombreDeBiere }} bouteille(s) de {{ beer.nomDeLaBiere }}</p>
       <span>
-        <button
-          type="button"
-          title="delete"
-          class="delete-button"
-          @click="deletebeer"
-        >
+        <button type="button" title="delete" @click="deletebeer">
           X
         </button>
         <button
           type="button"
           title="edit"
-          class="edit-button"
           @click="editbeer"
           v-if="!isCompleted"
         >
@@ -22,7 +16,6 @@
             aria-hidden="true"
             data-prefix="fas"
             data-icon="pen"
-            class="svg-inline--fa fa-pen fa-w-16"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="-380 -380 1280 1280"
