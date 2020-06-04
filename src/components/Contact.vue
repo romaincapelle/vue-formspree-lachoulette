@@ -40,7 +40,7 @@
           >
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="email"
+            type="text"
             name="_replyto"
             placeholder="Ex: 03 27 35 72 44"
             v-model="phoneMsg"
@@ -73,7 +73,7 @@
           >
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="email"
+            type="text"
             name="_replyto"
             placeholder="Ex: 11h30 "
             v-model="hourMsg"
@@ -122,7 +122,7 @@
     <div v-else>
       <h1 class="text-2xl ">Merci pour votre Commande</h1>
       <p>
-        Merci de verifié les informations ci-dessous. En cas, d'erreur veuillez
+        Merci de verifier les informations ci-dessous. En cas, d'erreur veuillez
         nous contacter au (0)3 27 35 72 44 ou par email à
         contact@lachoulette.com
       </p>
