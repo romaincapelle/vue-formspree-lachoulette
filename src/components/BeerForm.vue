@@ -1,11 +1,10 @@
 <template>
   <div>
-    <hr class="mt-6" />
-    <form @submit.prevent="submit">
+    <form @submit.prevent="submit" class="px-8">
       <h2 class="text-xl mt-6">Etape 02 - Ma commande</h2>
       <p class="text-sm my-2">Choisissez la quantité et le type de bière</p>
-      <div class="flex items-center">
-        <div class="w-1/5 mr-3">
+      <div class="flex items-stretch">
+        <div class="w-1/2 mr-3 py-5">
           <input
             class="w-full flex-shrink-0 my-2 w-10 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="number"
@@ -40,7 +39,7 @@
             </svg>
           </div>
         </div>
-        <div class="w-1/5">
+        <div class="w-1/2 py-5">
           <button
             class=" w-full text-sm border-2 py-1 px-2 hover:bg-white hover:text-grey bg-yellow"
             type="submit"

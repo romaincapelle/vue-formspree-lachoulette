@@ -10,121 +10,133 @@
         magasin, veuillez remplir le formulaire ci-dessous.
       </p>
       <hr class="mt-6" />
-      <h2 class="text-xl mt-6">Etape 01 - Mes informations</h2>
-      <form class="my-6" role="form" method="POST" @submit.prevent="sendEmail">
-        <div>
-          <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
-            >Votre Nom</label
+      <div class="xl:flex">
+        <div class="xl:w-1/2">
+          <form
+            class="my-6"
+            role="form"
+            method="POST"
+            @submit.prevent="sendEmail"
           >
-          <input
-            class="my-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="text"
-            name="name"
-            placeholder="Votre nom"
-            v-model="nameMsg"
-          />
-        </div>
-        <div>
-          <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
-            >Votre Email</label
-          >
-          <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="email"
-            name="_replyto"
-            placeholder="Votre E-mail"
-            v-model="emailMsg"
-          />
-        </div>
-        <div>
-          <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
-            >Téléphone</label
-          >
-          <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="text"
-            name="_replyto"
-            placeholder="Ex: 03 27 35 72 44"
-            v-model="phoneMsg"
-          />
-        </div>
+            <div>
+              <h2 class="text-xl mt-6">Etape 01 - Mes informations</h2>
+              <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
+                >Votre Nom</label
+              >
+              <input
+                class="my-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                name="name"
+                placeholder="Votre nom"
+                v-model="nameMsg"
+              />
+            </div>
+            <div>
+              <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
+                >Votre Email</label
+              >
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="email"
+                name="_replyto"
+                placeholder="Votre E-mail"
+                v-model="emailMsg"
+              />
+            </div>
+            <div>
+              <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
+                >Téléphone</label
+              >
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                name="_replyto"
+                placeholder="Ex: 03 27 35 72 44"
+                v-model="phoneMsg"
+              />
+            </div>
 
-        <div>
-          <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
-            >Vous pouvez nous laisser un commentaire</label
-          >
-          <textarea
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            name="message"
-            rows="5"
-            placeholder="Commentaire"
-            v-model="messageMsg"
-          ></textarea>
+            <div>
+              <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
+                >Vous pouvez nous laisser un commentaire</label
+              >
+              <textarea
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                name="message"
+                rows="5"
+                placeholder="Commentaire"
+                v-model="messageMsg"
+              ></textarea>
+            </div>
+            <label class="my-6 block text-gray-700 text-sm font-bold mb-2"
+              >Je me présente à la brasserie à la date indiqué. <br />
+              {Ouvert du lundi au vendredi de 8h à 12h et de 14h à 18h et le
+              samedi matin de 9h à 12h)</label
+            >
+            <div>
+              <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
+                >Date de passage:</label
+              >
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                name="_replyto"
+                locale="fr-fr"
+                placeholder="Ex: Vendredi 12 juin 2020 "
+                v-model="picker"
+              />
+            </div>
+            <div>
+              <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
+                >Heure de passage:</label
+              >
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                name="_replyto"
+                placeholder="Ex: 11h30 "
+                v-model="hourMsg"
+              />
+            </div>
+
+            <hr class="mt-6" />
+          </form>
         </div>
-        <label class="my-6 block text-gray-700 text-sm font-bold mb-2"
-          >Je me présente à la brasserie à la date indiqué. <br />
-          {Ouvert du lundi au vendredi de 8h à 12h et de 14h à 18h et le samedi
-          matin de 9h à 12h)</label
+        <div class="xl:w-1/2">
+          <BeerForm class="my-6" @submit="addBeer" />
+          <h3 v-if="beers.length > 0">Votre Panier</h3>
+          <ul>
+            <ListBeer
+              v-for="(beer, i) in beers"
+              :key="i"
+              :beer="beer"
+              @delete="deleteBeer(i)"
+            />
+          </ul>
+        </div>
+      </div>
+
+      <!-- 18 ans > -->
+      <div class="flex mt-6">
+        <label class="flex items-center">
+          <input type="checkbox" class="form-checkbox" />
+          <span class="ml-2">Je confirme avoir plus de 18 ans.</span>
+        </label>
+      </div>
+      <p class="text-lg mt-2 text-center">
+        Après réception de votre message, nous vous recontacterons pour vous
+        confirmer la disponibilité et la valeur totale de votre commande par
+        téléphone ou par mail.
+      </p>
+      <div class="my-8">
+        <button
+          class=" w-full text-sm border-2 py-1 px-2 hover:bg-white hover:text-grey bg-yellow h-12"
+          type="submit"
         >
-        <div>
-          <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
-            >Date de passage:</label
-          >
-          <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="text"
-            name="_replyto"
-            locale="fr-fr"
-            placeholder="Ex: Vendredi 12 juin 2020 "
-            v-model="picker"
-          />
-        </div>
-        <div>
-          <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
-            >Heure de passage:</label
-          >
-          <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="text"
-            name="_replyto"
-            placeholder="Ex: 11h30 "
-            v-model="hourMsg"
-          />
-        </div>
-        <BeerForm class="my-6" @submit="addBeer" />
-        <h3 v-if="beers.length > 0">Votre Panier</h3>
-        <ul>
-          <ListBeer
-            v-for="(beer, i) in beers"
-            :key="i"
-            :beer="beer"
-            @delete="deleteBeer(i)"
-          />
-        </ul>
+          Finaliser la commande
+        </button>
+      </div>
 
-        <hr class="mt-6" />
-
-        <!-- 18 ans > -->
-        <div class="flex mt-6">
-          <label class="flex items-center">
-            <input type="checkbox" class="form-checkbox" />
-            <span class="ml-2">Je confirme avoir plus de 18 ans.</span>
-          </label>
-        </div>
-        <p class="text-lg mt-2 text-center">
-          Après réception de votre message, nous vous recontacterons pour vous
-          confirmer la disponibilité et la valeur totale de votre commande par
-          téléphone ou par mail.
-        </p>
-        <div class="my-8">
-          <button
-            class=" w-full text-sm border-2 py-1 px-2 hover:bg-white hover:text-grey bg-yellow h-12"
-            type="submit"
-          >
-            Finaliser la commande
-          </button>
-        </div>
-      </form>
       <p class="border p-6 my-8">
         L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTÉ, À CONSOMMER AVEC
         MODÉRATION. BIÈRES ARTISANALES FABRIQUÉES EN FRANCE. CONTIENT DU MALT
