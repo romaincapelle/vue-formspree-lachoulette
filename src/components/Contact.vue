@@ -136,16 +136,16 @@
       </p>
     </div>
     <div v-else>
-      <h1 class="text-2xl ">Merci pour votre Commande</h1>
-      <p>
+      <h1 class="text-2xl leading-8">Merci pour votre Commande</h1>
+      <p class="leading-8">
         Merci de verifier les informations ci-dessous. En cas, d'erreur veuillez
         nous contacter au (0)3 27 35 72 44 ou par email à
         contact@lachoulette.com
       </p>
-      <p><strong>Votre nom:</strong> {{ nameMsg }}</p>
-      <p><strong>Votre Email:</strong> {{ emailMsg }}</p>
-      <p><strong>Votre téléphone:</strong> {{ emailMsg }}</p>
-      <p>
+      <p class="leading-8"><strong>Votre nom:</strong> {{ nameMsg }}</p>
+      <p class="leading-8"><strong>Votre Email:</strong> {{ emailMsg }}</p>
+      <p class="leading-8"><strong>Votre téléphone:</strong> {{ emailMsg }}</p>
+      <p class="leading-8">
         {{ nameMsg }}.<br />
         Vous avons recu un email et nous vous attendons le {{ picker }}.
         <br />Crenaux horaire:
