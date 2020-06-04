@@ -1,7 +1,7 @@
 <template>
   <div class="container max-w-2xl px-4 py-4 mx-auto">
     <div v-if="!orderCompleted">
-      <h1 class="text-2xl ">Bienvenue sur le drive de la choulette</h1>
+      <h1 class="text-2xl ">Bienvenue sur le drive de la Choulette</h1>
       <p class="text-sm my-2">
         Ouvert du lundi au vendredi de 8h à 12h et de 14h à 18h et le samedi
         matin de 9h à 12h. Pour commander en ligne et venir retirer en magasin,
@@ -49,7 +49,7 @@
 
         <div>
           <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
-            >Vous pouvez nous laissez un commentaire</label
+            >Vous pouvez nous laisser un commentaire</label
           >
           <textarea
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -60,7 +60,7 @@
           ></textarea>
         </div>
         <label class="my-6 block text-gray-700 text-sm font-bold mb-2"
-          >Je me presente à la brasserie à la date indiqué. <br />
+          >Je me présente à la brasserie à la date indiqué. <br />
           {Ouvert du lundi au vendredi de 8h à 12h et de 14h à 18h et le samedi
           matin de 9h à 12h)</label
         >
