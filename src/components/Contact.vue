@@ -64,9 +64,19 @@
           {Ouvert du lundi au vendredi de 8h à 12h et de 14h à 18h et le samedi
           matin de 9h à 12h)</label
         >
-        <v-row class="my-6" justify="center">
-          <v-date-picker locale="fr-fr" v-model="picker"></v-date-picker>
-        </v-row>
+        <div>
+          <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
+            >Date de passage:</label
+          >
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="text"
+            name="_replyto"
+            locale="fr-fr"
+            placeholder="Ex: Vendredi 12 juin 2020 "
+            v-model="picker"
+          />
+        </div>
         <div>
           <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
             >Heure de passage:</label
@@ -158,7 +168,7 @@ export default {
       phoneMsg: '',
       hourMsg: '',
       messageMsg: '',
-      picker: new Date().toISOString().substr(0, 10),
+      picker: '',
       error: false,
       beers: [],
       completed: [],
