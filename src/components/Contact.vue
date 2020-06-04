@@ -118,19 +118,29 @@
         EN FAIBLE QUANTITÉ, PEUT AVOIR DES CONSÉQUENCES GRAVES SUR LA SANTÉ DE
         L’ENFANT.
       </p>
-      <div>
-        <h1 class="text-2xl ">Votre Commande</h1>
-        <p>
-          Merci {{ nameMsg }}, pour votre commande. Vous avons recu un email et
-          nous vous attendons le {{ picker }}. <br />Crenaux horaire:
-          {{ hourMsg }}
-        </p>
-      </div>
     </div>
     <div v-else>
-      <p>Merci {{ nameMsg }}</p>
-      <p>Votre Email {{ emailMsg }}</p>
-      <p>Votre commande {{ beers }}</p>
+      <h1 class="text-2xl ">Merci pour votre Commande</h1>
+      <p>
+        Merci de verifié les informations ci-dessous. En cas, d'erreur veuillez
+        nous contacter au (0)3 27 35 72 44 ou par email à
+        contact@lachoulette.com
+      </p>
+      <p><strong>Votre nom:</strong> {{ nameMsg }}</p>
+      <p><strong>Votre Email:</strong> {{ emailMsg }}</p>
+      <p><strong>Votre téléphone:</strong> {{ emailMsg }}</p>
+      <p>
+        {{ nameMsg }}.<br />
+        Vous avons recu un email et nous vous attendons le {{ picker }}.
+        <br />Crenaux horaire:
+        {{ hourMsg }}
+      </p>
+      <h3 class="text-2xl">Merci pour votre Commande</h3>
+      <ul>
+        <p v-for="beer in beers" :key="beer.id">
+          {{ beer.nombreDeBiere }} bouteilles - {{ beer.nomDeLaBiere }}
+        </p>
+      </ul>
     </div>
   </div>
 </template>

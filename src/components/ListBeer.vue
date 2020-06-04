@@ -1,7 +1,7 @@
 <template>
   <li class="beer-item">
     <div class="beer-content" v-if="!editing">
-      <p>{{ beer.nombreDeBiere }} bouteille(s) de {{ beer.nomDeLaBiere }}</p>
+      <p>{{ beer.nombreDeBiere }} bouteille(s) - {{ beer.nomDeLaBiere }}</p>
       <span>
         <button type="button" title="delete" @click="deletebeer">
           X
