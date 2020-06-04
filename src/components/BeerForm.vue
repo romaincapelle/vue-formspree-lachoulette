@@ -2,7 +2,7 @@
   <div>
     <form @submit.prevent="submit" class="px-10">
       <h2 class="text-xl mt-6">Etape 02 - Ma commande</h2>
-      <p class="text-sm my-2">Choisissez la quantité et le type de bière</p>
+      <p class=" my-2">Choisissez la quantité et le type de bière</p>
       <div class="flex items-stretch">
         <div class="w-1/2 mr-3 py-5">
           <input
@@ -41,7 +41,7 @@
         </div>
         <div class="w-1/2 py-5">
           <button
-            class=" w-full text-sm border-2 py-1 px-2 hover:bg-white hover:text-grey bg-yellow"
+            class=" w-full  border-2 py-1 px-2 hover:bg-white hover:text-grey bg-yellow"
             type="submit"
             title="save"
           >

@@ -4,7 +4,7 @@
       <h1 class="text-2xl ">
         Bienvenue sur le drive du magasin d’usine de La Choulette
       </h1>
-      <p class="text-sm my-2">
+      <p class=" my-2">
         Ouvert du lundi au vendredi de 8h à 12h et de 14h à 18h et le samedi
         matin de 9h à 12h. Pour commander en ligne, venir retirer et payer en
         magasin, veuillez remplir le formulaire ci-dessous.
@@ -20,7 +20,7 @@
           >
             <div>
               <h2 class="text-xl mt-6">Etape 01 - Mes informations</h2>
-              <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
+              <label class="mt-6 block text-gray-700  font-bold mb-2"
                 >Votre Nom</label
               >
               <input
@@ -32,7 +32,7 @@
               />
             </div>
             <div>
-              <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
+              <label class="mt-6 block text-gray-700  font-bold mb-2"
                 >Votre Email</label
               >
               <input
@@ -44,7 +44,7 @@
               />
             </div>
             <div>
-              <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
+              <label class="mt-6 block text-gray-700  font-bold mb-2"
                 >Téléphone</label
               >
               <input
@@ -57,7 +57,7 @@
             </div>
 
             <div>
-              <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
+              <label class="mt-6 block text-gray-700  font-bold mb-2"
                 >Vous pouvez nous laisser un commentaire</label
               >
               <textarea
@@ -68,13 +68,13 @@
                 v-model="messageMsg"
               ></textarea>
             </div>
-            <label class="my-6 block text-gray-700 text-sm font-bold mb-2"
+            <label class="my-6 block text-gray-700  font-bold mb-2"
               >Je me présente à la brasserie à la date indiqué. <br />
               {Ouvert du lundi au vendredi de 8h à 12h et de 14h à 18h et le
               samedi matin de 9h à 12h)</label
             >
             <div>
-              <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
+              <label class="mt-6 block text-gray-700  font-bold mb-2"
                 >Date de passage:</label
               >
               <input
@@ -87,7 +87,7 @@
               />
             </div>
             <div>
-              <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
+              <label class="mt-6 block text-gray-700 smtext- font-bold mb-2"
                 >Heure de passage:</label
               >
               <input
@@ -130,7 +130,7 @@
       </p>
       <div class="my-8">
         <button
-          class=" w-full text-sm border-2 py-1 px-2 hover:bg-white hover:text-grey bg-yellow h-12"
+          class=" w-full  border-2 py-1 px-2 hover:bg-white hover:text-grey bg-yellow h-12"
           type="submit"
         >
           Finaliser la commande
