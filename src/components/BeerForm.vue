@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form @submit.prevent="submit" class="px-8">
+    <form @submit.prevent="submit" class="px-10">
       <h2 class="text-xl mt-6">Etape 02 - Ma commande</h2>
       <p class="text-sm my-2">Choisissez la quantité et le type de bière</p>
       <div class="flex items-stretch">

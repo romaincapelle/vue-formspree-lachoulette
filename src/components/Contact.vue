@@ -1,5 +1,5 @@
 <template>
-  <div class="container max-w-2xl px-4 py-4 mx-auto">
+  <div class="container px-4 py-4 mx-auto">
     <div v-if="!orderCompleted">
       <h1 class="text-2xl ">
         Bienvenue sur le drive du magasin d’usine de La Choulette
@@ -11,9 +11,9 @@
       </p>
       <hr class="mt-6" />
       <div class="xl:flex">
-        <div class="xl:w-1/2">
+        <div class="xl:w-1/2 my-10">
           <form
-            class="my-6"
+            class="my-10"
             role="form"
             method="POST"
             @submit.prevent="sendEmail"
@@ -102,7 +102,7 @@
             <hr class="mt-6" />
           </form>
         </div>
-        <div class="xl:w-1/2">
+        <div class="xl:w-1/2 my-10">
           <BeerForm class="my-6" @submit="addBeer" />
           <h3 v-if="beers.length > 0">Votre Panier</h3>
           <ul>
