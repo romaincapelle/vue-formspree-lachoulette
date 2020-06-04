@@ -7,6 +7,9 @@ module.exports = {
       red: '#ce000c',
       white: '#ffffff',
       black: '#444444'
+    },
+    fontFamily: {
+      serif: ['Playfair Display']
     }
   },
   variants: {},

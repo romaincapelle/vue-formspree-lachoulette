@@ -1,14 +1,16 @@
 <template>
   <div class="container max-w-2xl px-4 py-4 mx-auto">
     <div v-if="!orderCompleted">
-      <h1 class="text-2xl ">Bienvenue sur le drive de la Choulette</h1>
+      <h1 class="text-2xl ">
+        Bienvenue sur le drive du magasin d’usine de La Choulette
+      </h1>
       <p class="text-sm my-2">
         Ouvert du lundi au vendredi de 8h à 12h et de 14h à 18h et le samedi
-        matin de 9h à 12h. Pour commander en ligne et venir retirer en magasin,
-        veuillez remplir le formulaire ci-dessous.
+        matin de 9h à 12h. Pour commander en ligne, venir retirer et payer en
+        magasin, veuillez remplir le formulaire ci-dessous.
       </p>
       <hr class="mt-6" />
-      <h2 class="text-xl mt-6">Etape 01 - Mes informations commande</h2>
+      <h2 class="text-xl mt-6">Etape 01 - Mes informations</h2>
       <form class="my-6" role="form" method="POST" @submit.prevent="sendEmail">
         <div>
           <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
@@ -109,7 +111,11 @@
             <span class="ml-2">Je confirme avoir plus de 18 ans.</span>
           </label>
         </div>
-
+        <p class="text-lg mt-2 text-center">
+          Après réception de votre message, nous vous recontacterons pour vous
+          confirmer la disponibilité et la valeur totale de votre commande par
+          téléphone ou par mail.
+        </p>
         <div class="my-8">
           <button
             class=" w-full text-sm border-2 py-1 px-2 hover:bg-white hover:text-grey bg-yellow h-12"
@@ -145,7 +151,7 @@
         <br />Crenaux horaire:
         {{ hourMsg }}
       </p>
-      <h3 class="text-2xl">Merci pour votre Commande</h3>
+      <h3 class="text-2xl">Detail</h3>
       <ul>
         <p v-for="beer in beers" :key="beer.id">
           {{ beer.nombreDeBiere }} bouteilles - {{ beer.nomDeLaBiere }}

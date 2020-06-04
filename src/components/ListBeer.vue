@@ -1,7 +1,9 @@
 <template>
   <li class="beer-item">
     <div class="beer-content" v-if="!editing">
-      <p>{{ beer.nombreDeBiere }} bouteille(s) - {{ beer.nomDeLaBiere }}</p>
+      <p class="my-4 text-center">
+        {{ beer.nombreDeBiere }} bouteille(s) - {{ beer.nomDeLaBiere }}
+      </p>
       <span>
         <button type="button" title="delete" @click="deletebeer">
           X
@@ -62,12 +64,12 @@ export default {
 
 <style scoped>
 .beer-item {
-  margin: 16px 0;
+  margin: 16px auto;
   padding: 8px;
   padding-left: 16px;
-  background-color: #42b983;
+  background-color: #ebb716;
   border-radius: 8px;
-  color: white;
+  color: black;
 }
 
 .beer-content {
