@@ -46,6 +46,7 @@
             v-model="phoneMsg"
           />
         </div>
+
         <div>
           <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
             >Vous pouvez nous laissez un commentaire</label
@@ -58,8 +59,27 @@
             v-model="messageMsg"
           ></textarea>
         </div>
-
-        <BeerForm @submit="addBeer" />
+        <label class="my-6 block text-gray-700 text-sm font-bold mb-2"
+          >Je me presente à la brasserie à la date indiqué. <br />
+          {Ouvert du lundi au vendredi de 8h à 12h et de 14h à 18h et le samedi
+          matin de 9h à 12h)</label
+        >
+        <v-row class="my-6" justify="center">
+          <v-date-picker locale="fr-fr" v-model="picker"></v-date-picker>
+        </v-row>
+        <div>
+          <label class="mt-6 block text-gray-700 text-sm font-bold mb-2"
+            >Heure de passage:</label
+          >
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="email"
+            name="_replyto"
+            placeholder="Ex: 11h30 "
+            v-model="hourMsg"
+          />
+        </div>
+        <BeerForm class="my-6" @submit="addBeer" />
         <h3 v-if="beers.length > 0">Votre Panier</h3>
         <ul>
           <ListBeer
@@ -102,12 +122,15 @@
         <h1 class="text-2xl ">Votre Commande</h1>
         <p>
           Merci {{ nameMsg }}, pour votre commande. Vous avons recu un email et
-          nous vous attendons le
+          nous vous attendons le {{ picker }}. <br />Crenaux horaire:
+          {{ hourMsg }}
         </p>
       </div>
     </div>
     <div v-else>
-      <p>Merci</p>
+      <p>Merci {{ nameMsg }}</p>
+      <p>Votre Email {{ emailMsg }}</p>
+      <p>Votre commande {{ beers }}</p>
     </div>
   </div>
 </template>
@@ -123,7 +146,9 @@ export default {
       nameMsg: '',
       emailMsg: '',
       phoneMsg: '',
+      hourMsg: '',
       messageMsg: '',
+      picker: new Date().toISOString().substr(0, 10),
       error: false,
       beers: [],
       completed: [],
@@ -142,6 +167,8 @@ export default {
           name: this.nameMsg,
           from: this.emailMsg,
           _subject: `${this.nameMsg} | Message du Drive`,
+          date: this.picker,
+          hourMsg: this.hourMsg,
           message: this.messageMsg,
           beers: this.beers
         })

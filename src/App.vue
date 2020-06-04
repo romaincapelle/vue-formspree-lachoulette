@@ -1,16 +1,20 @@
 <template>
-  <div id="app">
+  <v-app>
     <Contact />
-  </div>
+  </v-app>
 </template>
 
 <script>
-import Contact from './components/Contact.vue'
+import Contact from './components/Contact'
 
 export default {
   name: 'App',
   components: {
     Contact
-  }
+  },
+
+  data: () => ({
+    //
+  })
 }
 </script>
