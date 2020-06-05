@@ -62,7 +62,7 @@
           ></textarea>
         </div>
         <label class="my-6 block text-gray-700 font-bold mb-2"
-          >Je me présente à la brasserie à la date indiqué. <br />
+          >Je me présente à la brasserie à la date indiquée. <br />
           {Ouvert du lundi au vendredi de 8h à 12h et de 14h à 18h et le samedi
           matin de 9h à 12h)</label
         >
