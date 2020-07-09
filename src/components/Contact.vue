@@ -22,6 +22,7 @@
             name="name"
             placeholder="Votre nom"
             v-model="nameMsg"
+            required
           />
         </div>
         <div>
@@ -34,6 +35,7 @@
             name="_replyto"
             placeholder="Votre E-mail"
             v-model="emailMsg"
+            required
           />
         </div>
         <div>
@@ -46,6 +48,7 @@
             name="_replyto"
             placeholder="Ex: 03 27 35 72 44"
             v-model="phoneMsg"
+            required
           />
         </div>
 
@@ -77,6 +80,7 @@
             locale="fr-fr"
             placeholder="Ex: Vendredi 12 juin 2020 "
             v-model="picker"
+            required
           />
         </div>
         <div>
@@ -89,6 +93,7 @@
             name="_replyto"
             placeholder="Ex: 11h30 "
             v-model="hourMsg"
+            required
           />
         </div>
         <BeerForm class="my-6" @submit="addBeer" />
