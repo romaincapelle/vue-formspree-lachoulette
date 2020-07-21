@@ -1,20 +1,23 @@
 <template>
   <div>
     <form @submit.prevent="submit" class="px-10">
+      <hr class="mt-20 mb-10" />
       <h2 class="text-xl mt-6">Etape 02 - Ma commande</h2>
       <p class=" my-2">Choisissez la quantité et le type de bière</p>
       <div class="flex items-stretch">
         <div class="w-1/2 mr-3 py-5">
+          <label> Quantité</label><br />
           <input
-            class="w-full flex-shrink-0 my-2 w-10 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            class="w-full flex-shrink-0 w-10 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-yellow"
             type="number"
             placeholder="Ex: 24"
             v-model.number="biere.nombreDeBiere"
           />
         </div>
-        <div class="mr-3 w-3/5">
+        <div class="w-1/2 mr-3 py-5">
+          <label> Biere</label>
           <select
-            class="  w-full mr-3 block appearance-none bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+            class="  w-full mr-3 block appearance-none bg-yellow border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
             v-model="biere.nomDeLaBiere"
           >
             <option
@@ -39,9 +42,10 @@
             </svg>
           </div>
         </div>
-        <div class="w-1/2 py-5">
+        <div class="w-1/2 mr-3 py-5">
+          <br />
           <button
-            class=" w-full  border-2 py-1 px-2 hover:bg-white hover:text-grey bg-yellow"
+            class=" w-full  border-2 py-1 px-2 hover:bg-white hover:text-grey bg-yellow hover:border hover:shadow hover:border-yellow"
             type="submit"
             title="save"
           >
@@ -49,6 +53,7 @@
           </button>
         </div>
       </div>
+      <hr class="mt-10 mb-20" />
     </form>
   </div>
 </template>

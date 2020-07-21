@@ -123,7 +123,7 @@
         </p>
         <div class="my-8">
           <button
-            class=" w-full border-2 py-1 px-2 hover:bg-white hover:text-grey bg-yellow h-12"
+            class=" w-full border-2 py-1 px-2 hover:bg-white hover:text-grey bg-yellow h-12 hover:shadow"
             type="submit"
           >
             Finaliser la commande
