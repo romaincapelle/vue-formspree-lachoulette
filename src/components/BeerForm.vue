@@ -45,11 +45,11 @@
         <div class="w-1/2 mr-3 py-5">
           <br />
           <button
-            class=" w-full  border-2 py-1 px-2 hover:bg-white hover:text-grey bg-yellow hover:border hover:shadow hover:border-yellow"
+            class=" w-full  border-2 py-1 px-2 hover:bg-white hover:text-grey bg-yellow hover:border hover:shadow hover:border-yellow add-to-cart-button"
             type="submit"
             title="save"
           >
-            Ajouter
+            Ajouter au panier
           </button>
         </div>
       </div>
@@ -76,73 +76,90 @@ export default {
       selectedOption: 'C',
       bieres: [
         { id: '00001', text: 'Alien porter Blackout bière noire 33cl 8%' },
-        { id: '00001', text: 'Choulette de Noël 33cl 7%' },
-        { id: '00001', text: 'Choulette de Noël 75cl 7%' },
-        { id: '00001', text: "L'Abbaye de Vaucelles 75cl 7,5% vol." },
-        { id: '00001', text: 'La battle of Cambrai 75cl 6% vol.' },
-        { id: '00001', text: 'La Blanche de Cambrai 33cl 5% vol.' },
-        { id: '00001', text: 'La Blanche de Cambrai 75cl 5% vol.' },
-        { id: '00001', text: 'La Choulette ambrée 33cl 8% vol.' },
-        { id: '00001', text: 'La Choulette Ambrée 75cl 8% vol.' },
-        { id: '00001', text: 'La Choulette ambrée Triple 75CL 9% vol.' },
-        { id: '00001', text: 'La Choulette blonde 33cl 7,5% vol.' },
-        { id: '00001', text: 'La Choulette blonde 75cl 7,5% vol.' },
-        { id: '00001', text: 'La Choulette blonde Triple 75CL 8,5% vol.' },
-        { id: '00001', text: 'La Choulette brune 33cl 7% vol.' },
-        { id: '00001', text: 'La Choulette brune 75cl 7% vol.' },
-        { id: '00001', text: 'La Choulette cerise 33cl 5% vol.' },
-        { id: '00001', text: 'La Choulette fraise 33cl 5% vol' },
-        { id: '00001', text: 'La Choulette framboise 33cl 6% vol.' },
-        { id: '00001', text: 'La Choulette pêche 33cl 5% vol.' },
-        { id: '00001', text: 'La Choulette printemps 33cl 6% vol.' },
-        { id: '00001', text: 'La Choulette printemps 75cl 6% vol.' },
-        { id: '00001', text: 'La Hé Biloute Ambrée 75cl 8,5% vol.' },
-        { id: '00001', text: 'La Hé Biloute Blonde 75cl 7% vol.' },
-        { id: '00001', text: 'La porte du Hainaut Ambrée 33cl 7% vol.' },
-        { id: '00001', text: 'La porte du Hainaut ambrée 75cl 7% vol.' },
-        { id: '00001', text: 'La Porte du Hainaut blonde 33cl 6% vol.' },
-        { id: '00001', text: 'La porte du Hainaut Blonde 75cl 6% vol.' },
+        { id: '00002', text: 'Choulette de Noël 33cl 7%' },
+        { id: '00003', text: 'Choulette de Noël 75cl 7%' },
+        { id: '00004', text: "L'Abbaye de Vaucelles 75cl 7,5% vol." },
+        { id: '00005', text: 'La battle of Cambrai 75cl 6% vol.' },
+        { id: '00006', text: 'La Blanche de Cambrai 33cl 5% vol.' },
+        { id: '00007', text: 'La Blanche de Cambrai 75cl 5% vol.' },
+        { id: '00008', text: 'La Choulette ambrée 33cl 8% vol.' },
+        { id: '00009', text: 'La Choulette Ambrée 75cl 8% vol.' },
+        { id: '00010', text: 'La Choulette ambrée Triple 75CL 9% vol.' },
+        { id: '00011', text: 'La Choulette blonde 33cl 7,5% vol.' },
+        { id: '00012', text: 'La Choulette blonde 75cl 7,5% vol.' },
+        { id: '00013', text: 'La Choulette blonde Triple 75CL 8,5% vol.' },
+        { id: '00014', text: 'La Choulette brune 33cl 7% vol.' },
+        { id: '00015', text: 'La Choulette brune 75cl 7% vol.' },
+        { id: '00016', text: 'La Choulette cerise 33cl 5% vol.' },
+        { id: '00017', text: 'La Choulette fraise 33cl 5% vol' },
+        { id: '00018', text: 'La Choulette framboise 33cl 6% vol.' },
+        { id: '00019', text: 'La Choulette pêche 33cl 5% vol.' },
+        { id: '00020', text: 'La Choulette printemps 33cl 6% vol.' },
+        { id: '00021', text: 'La Choulette printemps 75cl 6% vol.' },
+        { id: '00022', text: 'La Hé Biloute Ambrée 75cl 8,5% vol.' },
+        { id: '00023', text: 'La Hé Biloute Blonde 75cl 7% vol.' },
+        { id: '00024', text: 'La porte du Hainaut Ambrée 33cl 7% vol.' },
+        { id: '00025', text: 'La porte du Hainaut ambrée 75cl 7% vol.' },
+        { id: '00026', text: 'La Porte du Hainaut blonde 33cl 6% vol.' },
+        { id: '00027', text: 'La porte du Hainaut Blonde 75cl 6% vol.' },
         {
-          id: '00001-culottesambree33cl9vol',
+          id: '00028-culottesambree33cl9vol',
           text: 'La Sans-culottes ambrée 33cl 9% vol.'
         },
         {
-          id: '00001-culottesambree75cl9vol',
+          id: '00029-culottesambree75cl9vol',
           text: 'La Sans-culottes ambrée 75cl 9% vol.'
         },
         {
-          id: '00001-culottesblondecorsee33cl85vol',
+          id: '00030-culottesblondecorsee33cl85vol',
           text: 'La Sans-culottes blonde corsée 33cl 8,5% vol.'
         },
         {
-          id: '00001-culottesblondecorsee75cl85vol',
+          id: '00031-culottesblondecorsee75cl85vol',
           text: 'La Sans-culottes blonde corsée 75cl 8,5% vol.'
         },
         {
-          id: '00001-culottesblondelegere33cl6vol',
+          id: '00032-culottesblondelegere33cl6vol',
           text: 'La Sans-culottes blonde légère 33cl 6% vol.'
         },
         {
-          id: '00001-culottesblondelegere75cl6vol',
+          id: '00033-culottesblondelegere75cl6vol',
           text: 'La Sans-culottes blonde légère 75cl 6% vol.'
         },
         {
-          id: '00001-culottescerise33cl5vol',
+          id: '00034-culottescerise33cl5vol',
           text: 'La Sans-culottes cerise 33cl 5% vol.'
         },
         {
-          id: '00001-culotteshistorique33cl7vol',
+          id: '00035-culotteshistorique33cl7vol',
           text: 'La Sans-culottes historique 33cl 7% vol.'
         },
         {
-          id: '00001-culotteshistorique75cl7vol',
+          id: '00036-culotteshistorique75cl7vol',
           text: 'La Sans-culottes historique 75cl 7% vol.'
         },
-        { id: '00001', text: "La Tour d'Ostrevant 75cl 8,5% vol." },
-        { id: '00001', text: 'La Triboulette 75cl 5% vol.' },
-        { id: '00001', text: 'La Val des Cygnes Bio 33cl 7,5% vol.' },
-        { id: '00001', text: 'La Val des Cygnes Bio 75cl 7,5% vol.' },
-        { id: '00001', text: 'La Wilfred Owen 75cl 8,5% vol.' }
+        { id: '00037', text: "La Tour d'Ostrevant 75cl 8,5% vol." },
+        { id: '00038', text: 'La Triboulette 75cl 5% vol.' },
+        { id: '00039', text: 'La Val des Cygnes Bio 33cl 7,5% vol.' },
+        { id: '00040', text: 'La Sans-Culottes Framboise 33cl 8% vol.' },
+        { id: '00041', text: 'La Sans-culottes Noël 33cl 10% vol.' },
+        { id: '00042', text: 'La Fourre-Z’y tout 75cl 9% vol.' },
+        { id: '00043', text: 'Calendrier de l’avent 2020' },
+        {
+          id: '00044',
+          text: 'Coffret 4x33cl Sans Culottes, Choulette de Noël+ 2 verres'
+        },
+        { id: '00045', text: 'Coffret 4x33cl + 2 verres Sans-Culottes' },
+        { id: '00046', text: 'Coffret 2x75cl + 2 verres Sans Culottes' },
+        { id: '00047', text: 'Coffret 4x33cl + 2 verres Choulette' },
+        { id: '00048', text: 'Coffret 2x75cl + 1 verre Choulette' },
+        { id: '00049', text: 'La Choulette carotte IPA 33cl 5% vol.' },
+        { id: '00050', text: 'La Choulette framboise 75cl 6% vol.' },
+        { id: '00051', text: 'Knockout 33cl 8% vol.' },
+        { id: '00052', text: 'Choulette Double IPA 75cl 8% vol.' },
+        { id: '00053', text: 'Choulette de Noël 33cl 7%' },
+        { id: '00054', text: 'La Val des Cygnes Bio 33cl 7,5% vol.' },
+        { id: '00055', text: 'La Hé Biloute Ambrée 75cl 8,5% vol.' }
       ]
     }
   },
@@ -176,3 +193,14 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.add-to-cart-button {
+  min-height: 36px;
+}
+
+.add-to-cart-button:hover {
+  min-height: 36px;
+  border: 1px solid #ebb716;
+}
+</style>

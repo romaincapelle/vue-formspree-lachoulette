@@ -1,5 +1,5 @@
 <template>
-  <div class="container px-4 py-4 mx-auto">
+  <div class="container px-4 py-4 mx-auto bg-white">
     <div v-if="!orderCompleted">
       <h1 class="text-2xl ">
         Bienvenue sur le drive du magasin d’usine de La Choulette
@@ -110,9 +110,9 @@
         <hr class="mt-6" />
 
         <!-- 18 ans > -->
-        <div class="flex mt-6">
+        <div class="flex mt-6 bg-light-grey">
           <label class="flex items-center">
-            <input type="checkbox" class="form-checkbox" />
+            <input type="checkbox" required class="form-checkbox" />
             <span class="ml-2">Je confirme avoir plus de 18 ans.</span>
           </label>
         </div>
@@ -217,3 +217,17 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.bg-light-grey {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+input,
+textarea {
+  border: 1px solid black;
+  min-height: 70px;
+  padding: 20px 20px;
+  font-size: 20px;
+}
+</style>
