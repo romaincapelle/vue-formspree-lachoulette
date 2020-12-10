@@ -75,7 +75,6 @@ export default {
       },
       selectedOption: 'C',
       bieres: [
-        { id: '00001', text: 'Alien porter Blackout bière noire 33cl 8%' },
         { id: '00002', text: 'Choulette de Noël 33cl 7%' },
         { id: '00003', text: 'Choulette de Noël 75cl 7%' },
         { id: '00004', text: "L'Abbaye de Vaucelles 75cl 7,5% vol." },
@@ -94,8 +93,8 @@ export default {
         { id: '00017', text: 'La Choulette fraise 33cl 5% vol' },
         { id: '00018', text: 'La Choulette framboise 33cl 6% vol.' },
         { id: '00019', text: 'La Choulette pêche 33cl 5% vol.' },
-        { id: '00020', text: 'La Choulette printemps 33cl 6% vol.' },
-        { id: '00021', text: 'La Choulette printemps 75cl 6% vol.' },
+        // { id: '00020', text: 'La Choulette printemps 33cl 6% vol.' },
+        // { id: '00021', text: 'La Choulette printemps 75cl 6% vol.' },
         { id: '00022', text: 'La Hé Biloute Ambrée 75cl 8,5% vol.' },
         { id: '00023', text: 'La Hé Biloute Blonde 75cl 7% vol.' },
         { id: '00024', text: 'La porte du Hainaut Ambrée 33cl 7% vol.' },
@@ -144,7 +143,6 @@ export default {
         { id: '00040', text: 'La Sans-Culottes Framboise 33cl 8% vol.' },
         { id: '00041', text: 'La Sans-culottes Noël 33cl 10% vol.' },
         { id: '00042', text: 'La Fourre-Z’y tout 75cl 9% vol.' },
-        { id: '00043', text: 'Calendrier de l’avent 2020' },
         {
           id: '00044',
           text: 'Coffret 4x33cl Sans Culottes, Choulette de Noël+ 2 verres'
