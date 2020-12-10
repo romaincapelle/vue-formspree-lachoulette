@@ -143,21 +143,34 @@ export default {
         { id: '00040', text: 'La Sans-Culottes Framboise 33cl 8% vol.' },
         { id: '00041', text: 'La Sans-culottes Noël 33cl 10% vol.' },
         { id: '00042', text: 'La Fourre-Z’y tout 75cl 9% vol.' },
-        {
-          id: '00044',
-          text: 'Coffret 4x33cl Sans Culottes, Choulette de Noël+ 2 verres'
-        },
-        { id: '00045', text: 'Coffret 4x33cl + 2 verres Sans-Culottes' },
-        { id: '00046', text: 'Coffret 2x75cl + 2 verres Sans Culottes' },
-        { id: '00047', text: 'Coffret 4x33cl + 2 verres Choulette' },
-        { id: '00048', text: 'Coffret 2x75cl + 1 verre Choulette' },
         { id: '00049', text: 'La Choulette carotte IPA 33cl 5% vol.' },
         { id: '00050', text: 'La Choulette framboise 75cl 6% vol.' },
         { id: '00051', text: 'Knockout 33cl 8% vol.' },
         { id: '00052', text: 'Choulette Double IPA 75cl 8% vol.' },
         { id: '00053', text: 'Choulette de Noël 33cl 7%' },
         { id: '00054', text: 'La Val des Cygnes Bio 33cl 7,5% vol.' },
-        { id: '00055', text: 'La Hé Biloute Ambrée 75cl 8,5% vol.' }
+        { id: '00055', text: 'La Hé Biloute Ambrée 75cl 8,5% vol.' },
+        { id: '00048', text: 'BANNETON ÉCOSSAIS NOËL' },
+        {
+          id: '00048',
+          text: 'COFFRET 4X33CL SANS CULOTTES, CHOULETTE DE NOËL+ 2 VERRES'
+        },
+        { id: '00048', text: 'PETITE CORBEILLE MÉTAL NOËL' },
+        { id: '00048', text: 'PETIT CARRÉ NOËL' },
+        { id: '00048', text: 'PETITE CORBEILLE MÉTAL' },
+        { id: '00048', text: 'COFFRET 4X33CL + 2 VERRES CHOULETTE' },
+        { id: '00048', text: 'CORBEILLE MÉTAL CARRÉ NOIRE' },
+        { id: '00048', text: 'COFFRET 2X75CL + 1 VERRE CHOULETTE' },
+        { id: '00048', text: 'CORBEILLE MÉTAL DORÉE 75CL+33CL' },
+        { id: '00048', text: 'PETITE ECLISSE BEIGE NATUREL' },
+        { id: '00048', text: 'COFFRET 4X33CL + 2 VERRES SANS-CULOTTES' },
+        { id: '00048', text: 'BANNETON COUVERCLE' },
+        { id: '00048', text: 'PANIER CORDES' },
+        { id: '00048', text: 'COFFRET 2X75CL + 2 VERRES SANS CULOTTES' },
+        { id: '00048', text: 'PANIER BORDEAUX SANS VERRES' },
+        { id: '00048', text: 'CORBEILLE MÉTAL DORÉE 75CL' },
+        { id: '00048', text: 'PANIER BORDEAUX AVEC VERRES' },
+        { id: '00048', text: 'GRAND PANIER RECTANGLE GRIS GARNI' }
       ]
     }
   },
