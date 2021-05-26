@@ -171,7 +171,15 @@ export default {
         { id: '00071', text: 'PANIER BORDEAUX SANS VERRES' },
         { id: '00072', text: 'CORBEILLE MÉTAL DORÉE 75CL' },
         { id: '00073', text: 'PANIER BORDEAUX AVEC VERRES' },
-        { id: '00074', text: 'GRAND PANIER RECTANGLE GRIS GARNI' }
+        { id: '00074', text: 'GRAND PANIER RECTANGLE GRIS GARNI' },
+        { id: '00074', text: 'Panier Métal avec verres' },
+        { id: '00074', text: 'Panier Métal sans verres' },
+        { id: '00074', text: 'Panier Orange avec verres' },
+        { id: '00074', text: 'Petit Panier Orange avec verres' },
+        { id: '00074', text: 'Abbaye de Saint Vincent' },
+        { id: '00074', text: 'BlackChoulette' },
+        { id: '00074', text: 'Choulette Blonde BIO' },
+        { id: '00074', text: 'Wilfred Owen' }
       ]
     }
   },
